@@ -1,12 +1,7 @@
-ACTOR BFGAnn : CustomInventory
+ACTOR BFGAnn : BaseWeaponAndAmmoAnnouncer
 {
-    inventory.pickupmessage ""
-    -COUNTITEM
     States
     {
-    Spawn:
-        TNT1 A 1
-        Loop
     Pickup:
         TNT1 A 1 A_PlaySoundEx("ann/bfg", "WeaponSlot7", 0, -1)
         Stop

@@ -1,12 +1,7 @@
-ACTOR CellPackAnn : CustomInventory
+ACTOR CellPackAnn : BaseWeaponAndAmmoAnnouncer
 {
-    inventory.pickupmessage ""
-    -COUNTITEM
     States
     {
-    Spawn:
-        TNT1 A 1
-        Loop
     Pickup:
         TNT1 A 1 A_PlaySoundEx("ann/cellpack", "WeaponSlot7", 0, -1)
         Stop

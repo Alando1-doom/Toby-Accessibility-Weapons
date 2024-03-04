@@ -1,12 +1,7 @@
-ACTOR RocketAnn : CustomInventory
+ACTOR RocketAnn : BaseWeaponAndAmmoAnnouncer
 {
-    inventory.pickupmessage ""
-    -COUNTITEM
     States
     {
-    Spawn:
-        TNT1 A 1
-        Loop
     Pickup:
         TNT1 A 1 A_PlaySoundEx("ann/rocket", "WeaponSlot7", 0, -1)
         Stop

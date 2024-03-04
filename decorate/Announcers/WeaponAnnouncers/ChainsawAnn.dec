@@ -1,12 +1,7 @@
-ACTOR ChainsawAnn : CustomInventory
+ACTOR ChainsawAnn : BaseWeaponAndAmmoAnnouncer
 {
-    inventory.pickupmessage ""
-    -COUNTITEM
     States
     {
-    Spawn:
-        TNT1 A 1
-        Loop
     Pickup:
         TNT1 A 1 A_PlaySoundEx("ann/chainsaw", "WeaponSlot7", 0, -1)
         Stop

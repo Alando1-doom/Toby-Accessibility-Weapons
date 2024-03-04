@@ -3,6 +3,7 @@
 
 //Base classes
 #include "decorate/PickupCheckers/BasePickupAndAmmoChecker.dec"
+#include "decorate/Announcers/BaseWeaponAndAmmoAnnouncer.dec"
 
 //Weapons
 #include "decorate/Weapons/BFG9000_TO.dec"

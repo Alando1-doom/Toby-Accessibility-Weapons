@@ -1,12 +1,7 @@
-ACTOR PlasmagunAnn : CustomInventory
+ACTOR PlasmagunAnn : BaseWeaponAndAmmoAnnouncer
 {
-    inventory.pickupmessage ""
-    -COUNTITEM
     States
     {
-    Spawn:
-        TNT1 A 1
-        Loop
     Pickup:
         TNT1 A 1 A_PlaySoundEx("ann/plasmagun", "WeaponSlot7", 0, -1)
         Stop
