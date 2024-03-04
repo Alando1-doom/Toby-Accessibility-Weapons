@@ -1,3 +1,0 @@
-#include decorate/DEC_WEAP.txt
-#include decorate/DEC_AMMO.txt
-#include decorate/DEC_PLAY.txt
