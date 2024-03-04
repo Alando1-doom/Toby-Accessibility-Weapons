@@ -1,11 +1,5 @@
-ACTOR Plasmagun_ID2
+ACTOR Plasmagun_ID2 : BaseWeaponAndAmmoFlash
 {
-    Radius 11
-    Height 8
-    Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
     States
     {
     Spawn:
