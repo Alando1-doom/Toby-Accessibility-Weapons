@@ -116,21 +116,21 @@ ACTOR Chainsaw_TO : Weapon replaces Chainsaw
 
 actor Chainsaw_ID2
 {
-	Radius 11
-	Height 8
-	Speed 0
+    Radius 11
+    Height 8
+    Speed 0
     +CORPSE
     +FLOORCLIP
     +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_RadiusGive("ChainsawAnn", 128, RGF_PLAYERS, 1)
-		Goto Death
-	Death:
-		TNT1 A 8 A_RadiusGive("ChainsawAnn", 128, RGF_PLAYERS, 1)
-		Stop
-	}
+    States
+    {
+    Spawn:
+        TNT1 A 8 A_RadiusGive("ChainsawAnn", 128, RGF_PLAYERS, 1)
+        Goto Death
+    Death:
+        TNT1 A 8 A_RadiusGive("ChainsawAnn", 128, RGF_PLAYERS, 1)
+        Stop
+    }
 }
 
 Actor ChainsawAnn : CustomInventory
@@ -139,11 +139,11 @@ Actor ChainsawAnn : CustomInventory
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
        TNT1 A 1
        Loop
  Pickup:
-		TNT1 A 1 A_PlaySoundEx("ann/chainsaw", "WeaponSlot7", 0, -1)
+        TNT1 A 1 A_PlaySoundEx("ann/chainsaw", "WeaponSlot7", 0, -1)
         Stop
     }
 }
@@ -198,21 +198,21 @@ ACTOR Shotgun_TO : DoomWeapon Replaces Shotgun
 
 actor Shotgun_ID2
 {
-	Radius 11
-	Height 8
-	Speed 0
+    Radius 11
+    Height 8
+    Speed 0
     +CORPSE
     +FLOORCLIP
     +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_RadiusGive("ShotgunAnn", 128, RGF_PLAYERS, 1)
-		Goto Death
-	Death:
-		TNT1 A 8 A_RadiusGive("ShotgunAnn", 128, RGF_PLAYERS, 1)
-		Stop
-	}
+    States
+    {
+    Spawn:
+        TNT1 A 8 A_RadiusGive("ShotgunAnn", 128, RGF_PLAYERS, 1)
+        Goto Death
+    Death:
+        TNT1 A 8 A_RadiusGive("ShotgunAnn", 128, RGF_PLAYERS, 1)
+        Stop
+    }
 }
 
 Actor ShotgunAnn : CustomInventory
@@ -221,11 +221,11 @@ Actor ShotgunAnn : CustomInventory
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
        TNT1 A 1
        Loop
  Pickup:
-		TNT1 A 1 A_PlaySoundEx("ann/shotgun", "WeaponSlot7", 0, -1)
+        TNT1 A 1 A_PlaySoundEx("ann/shotgun", "WeaponSlot7", 0, -1)
         Stop
     }
 }
@@ -288,21 +288,21 @@ ACTOR SuperShotgun_TO : DoomWeapon Replaces SuperShotgun
 
 actor SSG_ID2
 {
-	Radius 11
-	Height 8
-	Speed 0
+    Radius 11
+    Height 8
+    Speed 0
     +CORPSE
     +FLOORCLIP
     +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_RadiusGive("SSGAnn", 128, RGF_PLAYERS, 1)
-		Goto Death
-	Death:
-		TNT1 A 8 A_RadiusGive("SSGAnn", 128, RGF_PLAYERS, 1)
-		Stop
-	}
+    States
+    {
+    Spawn:
+        TNT1 A 8 A_RadiusGive("SSGAnn", 128, RGF_PLAYERS, 1)
+        Goto Death
+    Death:
+        TNT1 A 8 A_RadiusGive("SSGAnn", 128, RGF_PLAYERS, 1)
+        Stop
+    }
 }
 
 Actor SSGAnn : CustomInventory
@@ -311,11 +311,11 @@ Actor SSGAnn : CustomInventory
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
        TNT1 A 1
        Loop
  Pickup:
-		TNT1 A 1 A_PlaySoundEx("ann/ssg", "WeaponSlot7", 0, -1)
+        TNT1 A 1 A_PlaySoundEx("ann/ssg", "WeaponSlot7", 0, -1)
         Stop
     }
 }
@@ -372,21 +372,21 @@ ACTOR Chaingun_TO : DoomWeapon Replaces Chaingun
 
 actor Chaingun_ID2
 {
-	Radius 11
-	Height 8
-	Speed 0
+    Radius 11
+    Height 8
+    Speed 0
     +CORPSE
     +FLOORCLIP
     +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_RadiusGive("ChaingunAnn", 128, RGF_PLAYERS, 1)
-		Goto Death
-	Death:
-		TNT1 A 8 A_RadiusGive("ChaingunAnn", 128, RGF_PLAYERS, 1)
-		Stop
-	}
+    States
+    {
+    Spawn:
+        TNT1 A 8 A_RadiusGive("ChaingunAnn", 128, RGF_PLAYERS, 1)
+        Goto Death
+    Death:
+        TNT1 A 8 A_RadiusGive("ChaingunAnn", 128, RGF_PLAYERS, 1)
+        Stop
+    }
 }
 
 Actor ChaingunAnn : CustomInventory
@@ -395,11 +395,11 @@ Actor ChaingunAnn : CustomInventory
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
        TNT1 A 1
        Loop
  Pickup:
-		TNT1 A 1 A_PlaySoundEx("ann/chaingun", "WeaponSlot7", 0, -1)
+        TNT1 A 1 A_PlaySoundEx("ann/chaingun", "WeaponSlot7", 0, -1)
         Stop
     }
 }
@@ -451,21 +451,21 @@ ACTOR RocketLauncher_TO : DoomWeapon Replaces RocketLauncher
 
 actor RocketLauncher_ID2
 {
-	Radius 11
-	Height 8
-	Speed 0
+    Radius 11
+    Height 8
+    Speed 0
     +CORPSE
     +FLOORCLIP
     +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_RadiusGive("RLAnn", 128, RGF_PLAYERS, 1)
-		Goto Death
-	Death:
-		TNT1 A 8 A_RadiusGive("RLAnn", 128, RGF_PLAYERS, 1)
-		Stop
-	}
+    States
+    {
+    Spawn:
+        TNT1 A 8 A_RadiusGive("RLAnn", 128, RGF_PLAYERS, 1)
+        Goto Death
+    Death:
+        TNT1 A 8 A_RadiusGive("RLAnn", 128, RGF_PLAYERS, 1)
+        Stop
+    }
 }
 
 Actor RLAnn : CustomInventory
@@ -474,11 +474,11 @@ Actor RLAnn : CustomInventory
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
        TNT1 A 1
        Loop
  Pickup:
-		TNT1 A 1 A_PlaySoundEx("ann/rlauncher", "WeaponSlot7", 0, -1)
+        TNT1 A 1 A_PlaySoundEx("ann/rlauncher", "WeaponSlot7", 0, -1)
         Stop
     }
 }
@@ -580,21 +580,21 @@ ACTOR PlasmaRifle_TO : DoomWeapon Replaces PlasmaRifle
 
 actor Plasmagun_ID2
 {
-	Radius 11
-	Height 8
-	Speed 0
+    Radius 11
+    Height 8
+    Speed 0
     +CORPSE
     +FLOORCLIP
     +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_RadiusGive("PlasmagunAnn", 128, RGF_PLAYERS, 1)
-		Goto Death
-	Death:
-		TNT1 A 8 A_RadiusGive("PlasmagunAnn", 128, RGF_PLAYERS, 1)
-		Stop
-	}
+    States
+    {
+    Spawn:
+        TNT1 A 8 A_RadiusGive("PlasmagunAnn", 128, RGF_PLAYERS, 1)
+        Goto Death
+    Death:
+        TNT1 A 8 A_RadiusGive("PlasmagunAnn", 128, RGF_PLAYERS, 1)
+        Stop
+    }
 }
 
 Actor PlasmagunAnn : CustomInventory
@@ -603,11 +603,11 @@ Actor PlasmagunAnn : CustomInventory
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
        TNT1 A 1
        Loop
  Pickup:
-		TNT1 A 1 A_PlaySoundEx("ann/plasmagun", "WeaponSlot7", 0, -1)
+        TNT1 A 1 A_PlaySoundEx("ann/plasmagun", "WeaponSlot7", 0, -1)
         Stop
     }
 }
@@ -719,21 +719,21 @@ ACTOR BFGBall_Toby replaces BFGBall
 
 actor BFG_ID2
 {
-	Radius 11
-	Height 8
-	Speed 0
+    Radius 11
+    Height 8
+    Speed 0
     +CORPSE
     +FLOORCLIP
     +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_RadiusGive("BFGAnn", 128, RGF_PLAYERS, 1)
-		Goto Death
-	Death:
-		TNT1 A 8 A_RadiusGive("BFGAnn", 128, RGF_PLAYERS, 1)
-		Stop
-	}
+    States
+    {
+    Spawn:
+        TNT1 A 8 A_RadiusGive("BFGAnn", 128, RGF_PLAYERS, 1)
+        Goto Death
+    Death:
+        TNT1 A 8 A_RadiusGive("BFGAnn", 128, RGF_PLAYERS, 1)
+        Stop
+    }
 }
 
 Actor BFGAnn : CustomInventory
@@ -742,11 +742,11 @@ Actor BFGAnn : CustomInventory
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
        TNT1 A 1
        Loop
  Pickup:
-		TNT1 A 1 A_PlaySoundEx("ann/bfg", "WeaponSlot7", 0, -1)
+        TNT1 A 1 A_PlaySoundEx("ann/bfg", "WeaponSlot7", 0, -1)
         Stop
     }
 }
