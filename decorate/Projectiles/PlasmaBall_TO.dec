@@ -1,0 +1,28 @@
+ACTOR PlasmaBall_TO replaces PlasmaBall
+{
+    Game Doom
+    SpawnID 51
+    Radius 13
+    Height 8
+    Speed 25
+    Damage 5
+    Translation "112:127=192:201"
+    Projectile
+    +RANDOMIZE
+    +THRUGHOST
+    RenderStyle Add
+    Alpha 0.75
+    SeeSound "weapons/plasmaf"
+    DeathSound "weapons/plasmax"
+    Obituary "$OB_MPPLASMARIFLE"
+    Decal PlasmaScorch
+    States
+    {
+    Spawn:
+        DLSR ABCDEFGHIJKLMOP 1 Bright
+        Loop
+    Death:
+        PLSE ABCDE 4 Bright
+        Stop
+    }
+}

@@ -1,0 +1,42 @@
+ACTOR PlasmaRifle_TO : DoomWeapon Replaces PlasmaRifle
+{
+    Game Doom
+    SpawnID 30
+    Weapon.SelectionOrder 100
+    Weapon.AmmoUse 1
+    Weapon.AmmoGive 40
+    Weapon.AmmoType "Cell"
+    Weapon.UpSound "weapons/plasmaup"
+    //Inventory.PickupFlash "Plasmagun_ID2"
+    Inventory.PickupSound "weapons/plasma_pkup"
+    Weapon.SlotNumber 6
+    Inventory.PickupMessage "$GOTPLASMA"
+    Tag "$TAG_PLASMARIFLE"
+    States
+    {
+    Ready:
+        PLSG A 1 A_WeaponReady
+        Loop
+    Deselect:
+        PLSG A 1 A_Lower
+        Loop
+    Select:
+        PLSG A 1 A_Raise
+        Loop
+    Fire:
+        PLSG A 3 A_FirePlasma
+        PLSG B 2 A_ReFire
+        PLSG CDEF 2
+        PLSG EDCB 2
+        Goto Ready
+    Flash:
+        PLSF A 4 Bright A_Light1
+        Goto LightDone
+        PLSF B 4 Bright A_Light1
+        Goto LightDone
+    Spawn:
+        PLAS A 31 A_SpawnItemEx("PlasmagunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        PLAS A 1
+        Loop
+    }
+}

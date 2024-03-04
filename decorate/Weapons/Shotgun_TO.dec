@@ -1,0 +1,47 @@
+ACTOR Shotgun_TO : DoomWeapon Replaces Shotgun
+{
+    Game Doom
+    SpawnID 27
+    Weapon.SelectionOrder 1300
+    Weapon.AmmoUse 1
+    Weapon.AmmoGive 8
+    Weapon.AmmoType "Shell"
+    Weapon.SlotNumber 3
+    AttackSound "weapons/shotgf"
+    Weapon.UpSound "weapons/shotup"
+    Inventory.PickupSound "weapons/shotgun_pkup"
+    //Inventory.PickupFlash "Shotgun_ID2"
+    Inventory.PickupMessage "$GOTSHOTGUN"
+    Obituary "$OB_MPSHOTGUN"
+    Tag "$TAG_SHOTGUN"
+    Decal BulletChip
+    Scale 0.85
+    States
+    {
+    Ready:
+        SHTG A 1 A_WeaponReady
+        Loop
+    Deselect:
+        SHTG A 1 A_Lower
+        Loop
+    Select:
+        SHTG A 1 A_Raise
+        Loop
+    Fire:
+        SHTG A 3 A_GunFlash
+        SHTG A 7 A_FireBullets(4,3,8,5,"BulletPuff")
+        SHTG BCDEFGHIJKLM 1
+        SHTG LKJIHGFEDCB 1
+        SHTG A 2
+        SHTG A 7 A_ReFire
+        Goto Ready
+    Flash:
+        SHTF A 4 Bright A_Light1
+        SHTF B 3 Bright A_Light2
+        Goto LightDone
+    Spawn:
+        SHOT A 31 A_SpawnItemEx("ShotgunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        SHOT A 1
+        Loop
+    }
+}

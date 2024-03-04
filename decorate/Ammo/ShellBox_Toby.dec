@@ -1,0 +1,28 @@
+ACTOR ShellBox_Toby : CustomInventory replaces ShellBox
+{
+    Inventory.PickupMessage "$GOTSHELLBOX"
+    Inventory.PickupSound "misc/ammo_pkup"
+    Inventory.PickupFlash "ShellBox_ID2"
+    States
+    {
+    Spawn:
+        SBOX A 1 A_SpawnItemEx("AmmoPickupChecker_ShellBox", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        //SBOX A 0 A_SpawnItemEx("AmmoInventoryChecker_Shells", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        SBOX A 18
+        SBOX A 1
+        Loop
+    Pickup:
+        TNT1 A 1 A_JumpIfInventory("Backpack_TO", 1, "HasBP")
+        TNT1 A 1 A_JumpIfInventory("Shell", 50, "NoPickup")
+        TNT1 A 1 A_GiveInventory("Shell", 20)
+        Stop
+    HasBP:
+        TNT1 A 1 A_JumpIfInventory("Shell", 100, "NoPickup")
+        TNT1 A 1 A_GiveInventory("Shell", 20)
+        Stop
+    NoPickup:
+        //TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
+        TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 0)
+        Fail
+    }
+}

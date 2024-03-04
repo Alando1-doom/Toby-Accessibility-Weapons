@@ -1,0 +1,46 @@
+ACTOR Pistol_TO : Weapon replaces Pistol
+{
+    Game Doom
+    Weapon.SelectionOrder 1900
+    Weapon.AmmoUse 1
+    Weapon.AmmoGive 20
+    Weapon.AmmoType "Clip"
+    Weapon.SlotNumber 2
+    Weapon.UpSound "weapons/pistolup"
+    AttackSound "weapons/pistol"
+    Obituary "$OB_MPPISTOL"
+    +WEAPON.WIMPY_WEAPON
+    Inventory.Pickupmessage "$PICKUP_PISTOL_DROPPED"
+    Tag "$TAG_PISTOL"
+    Decal BulletChip
+    States
+    {
+    Ready:
+        BERT A 1 A_WeaponReady
+        Loop
+    Deselect:
+        BERT A 1 A_Lower
+        Loop
+    Select:
+        BERT A 1 A_Raise
+        Loop
+    Fire:
+        BERT B 2
+        BERF A 2 Bright A_FireBullets(5, 0, 1, 5,"BulletPuff")
+        BERT BFE 1
+        BERT C 1
+        BERT D 2
+        BERT D 3
+        BERT D 2 A_Refire
+        BERT A 1
+        Goto Ready
+    Flash:
+        PISF A 7 Bright A_Light1
+        Goto LightDone
+        PISF A 7 Bright A_Light1
+        Goto LightDone
+     Spawn:
+        PIST A -1
+        Stop
+    }
+}
