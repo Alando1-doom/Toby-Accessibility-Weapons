@@ -1,6 +1,9 @@
 //Player
 #include "decorate/Player/Player_TO.dec"
 
+//Base classes
+#include "decorate/PickupCheckers/BasePickupAndAmmoChecker.dec"
+
 //Weapons
 #include "decorate/Weapons/BFG9000_TO.dec"
 #include "decorate/Weapons/Chaingun_TO.dec"

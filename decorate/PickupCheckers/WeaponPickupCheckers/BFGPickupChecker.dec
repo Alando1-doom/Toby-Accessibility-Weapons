@@ -1,30 +1,5 @@
-ACTOR BFGPickupChecker
+ACTOR BFGPickupChecker : BasePickupAndAmmoChecker
 {
-    Health 10000000000000000000000
-    Radius 8
-    Height 8
-    Speed 0
-    Mass 2000000000000
-    PainChance 0
-    DONTHURTSHOOTER
-    MONSTER
-    +JUSTHIT
-    +DONTGIB
-    +FLOORCLIP
-    +NOTARGET
-    -COUNTKILL
-    -SHOOTABLE
-    +NOBLOOD
-    +FASTER
-    +ALWAYSFAST
-    +NOCLIP
-    +INVULNERABLE
-    +GHOST
-    +LOOKALLAROUND
-    +SEEINVISIBLE
-    //PainSound "null"
-    //DeathSound "null"
-    MeleeDamage 0
     States
     {
     Spawn:
