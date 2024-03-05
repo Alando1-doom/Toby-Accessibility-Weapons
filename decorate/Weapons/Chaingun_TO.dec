@@ -1,0 +1,49 @@
+ACTOR Chaingun_TO : DoomWeapon Replaces Chaingun
+{
+    Game Doom
+    SpawnID 28
+    Weapon.SelectionOrder 700
+    Weapon.AmmoUse 1
+    Weapon.AmmoGive 20
+    Weapon.AmmoType "Clip"
+    Weapon.SlotNumber 4
+    AttackSound "weapons/chaing"
+    Weapon.UpSound "weapons/chaingunup"
+    //Inventory.PickupFlash "Chaingun_ID2"
+    Inventory.PickupSound "weapons/chaingun_pkup"
+    Inventory.PickupMessage "$GOTCHAINGUN"
+    Obituary "$OB_MPCHAINGUN"
+    Tag "$TAG_CHAINGUN"
+    Decal BulletChip
+    States
+    {
+    Ready:
+        CHG1 A 1 A_WeaponReady
+        Loop
+    Deselect:
+        CHG1 A 1 A_Lower
+        Loop
+    Select:
+        CHG1 A 1 A_Raise
+        Loop
+    Fire:
+        CHG1 A 0 A_GunFlash
+        CHG1 A 2 A_FireBullets (5,0,1,6,"BulletPuff")
+        CHG1 B 2
+        CHG1 C 2 A_FireBullets (5,0,1,6,"BulletPuff")
+        CHG1 D 2
+        CHG1 D 0 A_ReFire
+        CHG1 ABCDABCD 2 A_WeaponReady
+        Goto Ready
+    Flash:
+        CHGF A 2 Bright A_Light1
+        TNT1 A 2
+        CHGF B 2 Bright A_Light2
+        TNT1 A 2 A_Light0
+        Stop
+    Spawn:
+        MGUN A 31 A_SpawnItemEx("ChaingunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        MGUN A 1
+        Loop
+    }
+}

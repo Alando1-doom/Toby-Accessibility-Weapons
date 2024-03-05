@@ -1,0 +1,55 @@
+ACTOR SuperShotgun_TO : DoomWeapon Replaces SuperShotgun
+{
+    Game Doom
+    SpawnID 33
+    Weapon.SelectionOrder 400
+    Weapon.AmmoUse 2
+    Weapon.AmmoGive 8
+    Weapon.AmmoType "Shell"
+    Weapon.UpSound "weapons/ssgup"
+    //Inventory.PickupFlash "SSG_ID2"
+    Inventory.PickupSound "weapons/ssg_pkup"
+    Inventory.PickupMessage "$GOTSHOTGUN2"
+    Obituary "$OB_MPSSHOTGUN"
+    Tag "$TAG_SUPERSHOTGUN"
+    Weapon.SlotNumber 3
+    Decal BulletChip
+    States
+    {
+    Ready:
+        SHT2 A 1 A_WeaponReady
+        Loop
+    Deselect:
+        SHT2 A 1 A_Lower
+        Loop
+    Select:
+        SHT2 A 1 A_Raise
+        Loop
+    Fire:
+        SHT2 A 3
+        SHT2 A 4 A_FireShotgun2
+        SHT2 BC 3
+        SHT2 D 3 A_CheckReload
+        SHT2 E 3 A_OpenShotgun2
+        SHT2 F 3
+        SHT2 GHI 3
+        SHT2 J 3 A_LoadShotgun2
+        SHT2 KLMNO 3
+        SHT2 P 3 A_CloseShotgun2
+        SHT2 Q 3
+        SHT2 A 5 A_Refire
+        Goto Ready
+    // unused states
+        SHT2 B 7
+        SHT2 A 3
+        Goto Deselect
+    Flash:
+        SH2F A 2 Bright A_Light1
+        SH2F B 2 Bright A_Light2
+        Goto LightDone
+    Spawn:
+        SGN2 A 31 A_SpawnItemEx("SSGPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        SGN2 A 1
+        Loop
+    }
+}

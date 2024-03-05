@@ -1,0 +1,44 @@
+ACTOR RocketLauncher_TO : DoomWeapon Replaces RocketLauncher
+{
+    Game Doom
+    SpawnID 29
+    Weapon.SelectionOrder 2500
+    Weapon.AmmoUse 1
+    Weapon.AmmoGive 2
+    Weapon.AmmoType "RocketAmmo"
+    Weapon.UpSound "weapons/rocketup"
+    Inventory.PickupSound "weapons/rocket_pkup"
+    //Inventory.PickupFlash "RocketLauncher_ID2"
+    Weapon.SlotNumber 5
+    +WEAPON.NOAUTOFIRE
+    Inventory.PickupMessage "$GOTLAUNCHER"
+    Tag "$TAG_ROCKETLAUNCHER"
+    States
+    {
+    Ready:
+        MISG A 1 A_WeaponReady
+        Loop
+    Deselect:
+        MISG A 1 A_Lower
+        Loop
+    Select:
+        MISG A 1 A_Raise
+        Loop
+    Fire:
+        MISG B 1 A_GunFlash
+        MISG B 1 A_FireMissile
+        MISG CDEFG 2
+        MISG FCB 2
+        MISG B 0 A_ReFire
+        Goto Ready
+    Flash:
+        MISF A 2 Bright A_Light1
+        MISF B 1 Bright
+        MISF CD 1 Bright A_Light2
+        Goto LightDone
+    Spawn:
+        LAUN A 31 A_SpawnItemEx("RocketLauncherPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        LAUN A 1
+        Loop
+    }
+}

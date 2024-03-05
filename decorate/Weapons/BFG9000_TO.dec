@@ -1,0 +1,47 @@
+ACTOR BFG9000_TO : DoomWeapon Replaces BFG9000
+{
+    Game Doom
+    Height 20
+    SpawnID 31
+    Weapon.SelectionOrder 2800
+    Weapon.AmmoUse 40
+    Weapon.AmmoGive 40
+    Weapon.AmmoType "Cell"
+    Weapon.UpSound "weapons/bfgup"
+    //Inventory.PickupFlash "BFG_ID2"
+    Inventory.PickupSound "weapons/bfg_pkup"
+    Weapon.SlotNumber 7
+    +WEAPON.NOAUTOFIRE
+    Inventory.PickupMessage "$GOTBFG9000"
+    Tag "$TAG_BFG9000"
+    Scale 0.8
+    States
+    {
+    Ready:
+        BFGG A 1 A_WeaponReady
+        Loop
+    Deselect:
+        BFGG A 1 A_Lower
+        Loop
+    Select:
+        BFGG A 1 A_Raise
+        Loop
+    Fire:
+        BFGG A 10 A_BFGsound
+        BFGG B 10 Bright
+        BFGF A 10 Bright A_GunFlash
+        BFGF B 2 Bright A_FireBFG
+        BFGF C 2 Bright
+        BFGF DEFGH 2
+        BFGG A 16 A_ReFire
+        Goto Ready
+    Flash:
+        TNT1 A 11 Bright A_Light1
+        TNT1 A 6 Bright A_Light2
+        Goto LightDone
+    Spawn:
+        BFUG A 31 A_SpawnItemEx("BFGPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        BFUG A 1
+        Loop
+    }
+}

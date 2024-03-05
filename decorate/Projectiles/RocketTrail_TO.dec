@@ -1,0 +1,21 @@
+ACTOR RocketTrail_TO
+{
+    Radius 8
+    Height 8
+    Speed 0
+    +NOCLIP
+    +NOINTERACTION
+    +NOGRAVITY
+    PROJECTILE
+    Scale 0.5
+    States
+    {
+    Spawn:
+        TNT1 A 3
+        SPIR AAABBBCCCDDDEEE 1 A_FadeOut
+        Goto Death
+    Death:
+        TNT1 A 1
+        Stop
+    }
+}

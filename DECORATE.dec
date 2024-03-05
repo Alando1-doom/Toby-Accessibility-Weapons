@@ -1,0 +1,111 @@
+//Player
+#include "decorate/Player/Player_TO.dec"
+
+//Base classes
+#include "decorate/PickupCheckers/BasePickupAndAmmoChecker.dec"
+#include "decorate/Announcers/BaseWeaponAndAmmoAnnouncer.dec"
+#include "decorate/Flashes/BaseWeaponAndAmmoFlash.dec"
+
+//Weapons
+#include "decorate/Weapons/BFG9000_TO.dec"
+#include "decorate/Weapons/Chaingun_TO.dec"
+#include "decorate/Weapons/Chainsaw_TO.dec"
+#include "decorate/Weapons/Fist_TO.dec"
+#include "decorate/Weapons/Pistol_TO.dec"
+#include "decorate/Weapons/PlasmaRifle_TO.dec"
+#include "decorate/Weapons/RocketLauncher_TO.dec"
+#include "decorate/Weapons/Shotgun_TO.dec"
+#include "decorate/Weapons/SuperShotgun_TO.dec"
+
+//Weapon announcers
+#include "decorate/Announcers/WeaponAnnouncers/BFGAnn.dec"
+#include "decorate/Announcers/WeaponAnnouncers/ChaingunAnn.dec"
+#include "decorate/Announcers/WeaponAnnouncers/ChainsawAnn.dec"
+#include "decorate/Announcers/WeaponAnnouncers/PlasmagunAnn.dec"
+#include "decorate/Announcers/WeaponAnnouncers/RLAnn.dec"
+#include "decorate/Announcers/WeaponAnnouncers/ShotgunAnn.dec"
+#include "decorate/Announcers/WeaponAnnouncers/SSGAnn.dec"
+
+//Weapon flashes (unused?)
+#include "decorate/Flashes/WeaponFlashes/BFG_ID2.dec"
+#include "decorate/Flashes/WeaponFlashes/Chaingun_ID2.dec"
+#include "decorate/Flashes/WeaponFlashes/Chainsaw_ID2.dec"
+#include "decorate/Flashes/WeaponFlashes/Plasmagun_ID2.dec"
+#include "decorate/Flashes/WeaponFlashes/RocketLauncher_ID2.dec"
+#include "decorate/Flashes/WeaponFlashes/Shotgun_ID2.dec"
+#include "decorate/Flashes/WeaponFlashes/SSG_ID2.dec"
+
+//Weapon pickup checkers
+#include "decorate/PickupCheckers/WeaponPickupCheckers/BFGPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/ChaingunPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/PlasmagunPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/RocketLauncherPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/ShotgunPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/SSGPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/WeaponPickupChecker.dec"
+
+//Ammo
+#include "decorate/Ammo/CellPack_Toby.dec"
+#include "decorate/Ammo/Cell_Toby.dec"
+#include "decorate/Ammo/ClipBox_Toby.dec"
+#include "decorate/Ammo/Clip_Toby.dec"
+#include "decorate/Ammo/Clip_Toby_Zombie.dec"
+#include "decorate/Ammo/RocketAmmo_Toby.dec"
+#include "decorate/Ammo/RocketBox_Toby.dec"
+#include "decorate/Ammo/ShellBox_Toby.dec"
+#include "decorate/Ammo/Shell_Toby.dec"
+
+//Ammo announcers
+#include "decorate/Announcers/AmmoAnnouncers/CellAnn.dec"
+#include "decorate/Announcers/AmmoAnnouncers/CellPackAnn.dec"
+#include "decorate/Announcers/AmmoAnnouncers/ClipAnn.dec"
+#include "decorate/Announcers/AmmoAnnouncers/ClipBoxAnn.dec"
+#include "decorate/Announcers/AmmoAnnouncers/RocketAnn.dec"
+#include "decorate/Announcers/AmmoAnnouncers/RocketBoxAnn.dec"
+#include "decorate/Announcers/AmmoAnnouncers/ShellBoxAnn.dec"
+#include "decorate/Announcers/AmmoAnnouncers/ShellsAnn.dec"
+
+//Ammo flashes
+#include "decorate/Flashes/AmmoFlashes/CellPack_ID2.dec"
+#include "decorate/Flashes/AmmoFlashes/Cell_ID2.dec"
+#include "decorate/Flashes/AmmoFlashes/ClipBox_ID2.dec"
+#include "decorate/Flashes/AmmoFlashes/Clip_ID2.dec"
+#include "decorate/Flashes/AmmoFlashes/RocketBox_ID2.dec"
+#include "decorate/Flashes/AmmoFlashes/Rocket_ID2.dec"
+#include "decorate/Flashes/AmmoFlashes/ShellBox_ID2.dec"
+#include "decorate/Flashes/AmmoFlashes/Shells_ID2.dec"
+
+//Ammo pickup checkers
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_AmmoBox.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_Cell.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_CellPack.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_Clip.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_Rocket.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_RocketBox.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_Shell.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_ShellBox.dec"
+
+//Ammo inventory checkers
+#include "decorate/AmmoInventoryCheckers/AmmoInventoryChecker_Bullets.dec"
+#include "decorate/AmmoInventoryCheckers/AmmoInventoryChecker_Cell.dec"
+#include "decorate/AmmoInventoryCheckers/AmmoInventoryChecker_Rocket.dec"
+#include "decorate/AmmoInventoryCheckers/AmmoInventoryChecker_Shells.dec"
+
+//Pickups
+#include "decorate/Pickups/Backpack_TO.dec"
+
+//Pickup announcers
+#include "decorate/Announcers/PickupAnnouncers/BPackAnn.dec"
+
+//Pickup flashes
+#include "decorate/Flashes/PickupFlashes/BPack_ID2.dec"
+
+//Pickup pickup checkers
+#include "decorate/PickupCheckers/PickupPickupCheckers/BPackPickupChecker.dec"
+
+//Projectiles
+#include "decorate/Projectiles/BFGBall_Toby.dec"
+#include "decorate/Projectiles/PlasmaBall_TO.dec"
+#include "decorate/Projectiles/RocketTrail_TO.dec"
+#include "decorate/Projectiles/Rocket_TO.dec"
