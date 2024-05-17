@@ -1,0 +1,12 @@
+ACTOR BFG_ID2 : BaseWeaponAndAmmoFlash
+{
+    States
+    {
+    Spawn:
+        TNT1 A 8 A_RadiusGive("BFGAnn", 128, RGF_PLAYERS, 1)
+        Goto Death
+    Death:
+        TNT1 A 8 A_RadiusGive("BFGAnn", 128, RGF_PLAYERS, 1)
+        Stop
+    }
+}

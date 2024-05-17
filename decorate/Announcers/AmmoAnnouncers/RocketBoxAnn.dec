@@ -1,0 +1,9 @@
+ACTOR RocketBoxAnn : BaseWeaponAndAmmoAnnouncer
+{
+    States
+    {
+    Pickup:
+        TNT1 A 1 A_PlaySoundEx("ann/rocketbox", "WeaponSlot7", 0, -1)
+        Stop
+    }
+}

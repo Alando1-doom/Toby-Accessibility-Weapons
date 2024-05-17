@@ -1,0 +1,28 @@
+ACTOR CellPack_Toby : CustomInventory replaces CellPack
+{
+    Inventory.PickupMessage "$GOTCELLBOX"
+    Inventory.PickupSound "misc/ammo_pkup"
+    Inventory.PickupFlash "CellPack_ID2"
+    States
+    {
+    Spawn:
+        CELP A 1 A_SpawnItemEx("AmmoPickupChecker_CellPack", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        //CELP A 0 A_SpawnItemEx("AmmoInventoryChecker_Cell", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        CELP A 18
+        CELP A 1
+        Loop
+    Pickup:
+        TNT1 A 1 A_JumpIfInventory("Backpack_TO", 1, "HasBP")
+        TNT1 A 1 A_JumpIfInventory("Cell", 300, "NoPickup")
+        TNT1 A 1 A_GiveInventory("Cell", 100)
+        Stop
+    HasBP:
+        TNT1 A 1 A_JumpIfInventory("Cell", 600, "NoPickup")
+        TNT1 A 1 A_GiveInventory("Cell", 100)
+        Stop
+    NoPickup:
+        //TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
+        TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 0)
+        Fail
+    }
+}

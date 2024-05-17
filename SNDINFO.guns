@@ -1,103 +1,103 @@
 //Fist
-weapons/fistup			dsfistup
+weapons/fistup              dsfistup
 
 //Pistol
-weapons/pistolup		dspisup
+weapons/pistolup            dspisup
 
 //Chainsaw
-weapons/chainsaw_pkup	dscspk2
+weapons/chainsaw_pkup       dscspk2
 
 //Shotgun
-weapons/shotup			dsshotpk
-weapons/shotgun_pkup	dssgpk2
-$rolloff weapons/sgbeacon	linear	56 300
-$volume weapons/sgbeacon   0.75
-weapons/sgbeacon		sgbcn
+weapons/shotup              dsshotpk
+weapons/shotgun_pkup        dssgpk2
+$rolloff weapons/sgbeacon   linear 56 300
+$volume weapons/sgbeacon    0.75
+weapons/sgbeacon            sgbcn
 
 //Boomstick!
-weapons/ssgup			dsssgpk
-weapons/ssg_pkup		dsssgpk2
-$rolloff weapons/ssgbeacon	linear	56 300
+weapons/ssgup               dsssgpk
+weapons/ssg_pkup            dsssgpk2
+$rolloff weapons/ssgbeacon  linear 56 300
 $volume weapons/ssgbeacon   0.75
-weapons/ssgbeacon		ssgbcn
+weapons/ssgbeacon           ssgbcn
 
 //Chaingun
-weapons/chaing			dscgfir
-weapons/chaingunup		dscgup
-weapons/chaingun_pkup	dscgpk2
-$rolloff weapons/cgbeacon	linear	56 300
-$volume weapons/cgbeacon   0.5
-weapons/cgbeacon		cgbcn
+weapons/chaing              dscgfir
+weapons/chaingunup          dscgup
+weapons/chaingun_pkup       dscgpk2
+$rolloff weapons/cgbeacon   linear 56 300
+$volume weapons/cgbeacon    0.5
+weapons/cgbeacon            cgbcn
 
 //Rocket Launcher
-weapons/rocketup		dsrckup
-weapons/rocket_pkup		dsrlpk2
-$rolloff weapons/rlbeacon	linear	56 300
-$volume weapons/rlbeacon   0.5
-weapons/rlbeacon		rlbcn
+weapons/rocketup            dsrckup
+weapons/rocket_pkup         dsrlpk2
+$rolloff weapons/rlbeacon   linear 56 300
+$volume weapons/rlbeacon    0.5
+weapons/rlbeacon            rlbcn
 
 //Plasmagun
-weapons/plasmaup		dsplasup
-weapons/plasma_pkup		dsprpk2
-$rolloff weapons/prbeacon	linear	56 300
-$volume weapons/prbeacon   0.5
-weapons/prbeacon		prbcn
+weapons/plasmaup            dsplasup
+weapons/plasma_pkup         dsprpk2
+$rolloff weapons/prbeacon   linear	56 300
+$volume weapons/prbeacon    0.5
+weapons/prbeacon            prbcn
 
 //BFG 9000
-weapons/bfgup			dsbfgup
-weapons/bfg_pkup		dsbfgpk2
-$rolloff weapons/bfgbeacon	linear	56 300
+weapons/bfgup               dsbfgup
+weapons/bfg_pkup            dsbfgpk2
+$rolloff weapons/bfgbeacon  linear	56 300
 $volume weapons/bfgbeacon   0.5
-weapons/bfgbeacon		bfgbcn
+weapons/bfgbeacon           bfgbcn
 
 //Accessibility Beacon Sounds
-$rolloff misc/weap	linear	56 300
-misc/weap		dsweapbc
-$rolloff misc/ammo	linear	56 300
-misc/ammo		dsammobc
-$rolloff misc/ammo/shell	linear	56 300
-misc/ammo/shell		dsshell
-$rolloff misc/ammo/shellbox		linear	56 300
-misc/ammo/shellbox		dssbox
-$rolloff misc/ammo/clip	linear	56 300
-misc/ammo/clip		dsclip
-$rolloff misc/ammo/ammobox	linear	56 300
-misc/ammo/ammobox		dsabox
-$rolloff misc/ammo/rocket	linear	56 300
-misc/ammo/rocket		dsrockt
-$rolloff misc/ammo/rocketbox	linear	56 300
-misc/ammo/rocketbox		dsrckbox
-$rolloff misc/ammo/cell		linear	56 300
-misc/ammo/cell		dscell
-$rolloff misc/ammo/cellpack		linear	56 300
-misc/ammo/cellpack		dscelpak
-$rolloff misc/bpbeacon	linear	56 300
-misc/bpbeacon		dsbckpbc
+$rolloff misc/weap              linear 56 300
+misc/weap                       dsweapbc
+$rolloff misc/ammo              linear 56 300
+misc/ammo                       dsammobc
+$rolloff misc/ammo/shell        linear 56 300
+misc/ammo/shell                 dsshell
+$rolloff misc/ammo/shellbox     linear 56 300
+misc/ammo/shellbox              dssbox
+$rolloff misc/ammo/clip         linear 56 300
+misc/ammo/clip                  dsclip
+$rolloff misc/ammo/ammobox      linear 56 300
+misc/ammo/ammobox               dsabox
+$rolloff misc/ammo/rocket       linear 56 300
+misc/ammo/rocket                dsrockt
+$rolloff misc/ammo/rocketbox    linear 56 300
+misc/ammo/rocketbox             dsrckbox
+$rolloff misc/ammo/cell         linear 56 300
+misc/ammo/cell                  dscell
+$rolloff misc/ammo/cellpack     linear 56 300
+misc/ammo/cellpack              dscelpak
+$rolloff misc/bpbeacon          linear 56 300
+misc/bpbeacon                   dsbckpbc
 
 //Proxy Sounds
-prox/warm	dswarm
-prox/warmer	dswarmer
-prox/hot	dshot
+prox/warm       dswarm
+prox/warmer     dswarmer
+prox/hot        dshot
 
 //Pickup Sounds
-misc/bpack		dsbpack
-misc/ammo_pkup	dsammoup
+misc/bpack      dsbpack
+misc/ammo_pkup  dsammoup
 
 //Announcer
-ann/chainsaw	dscsann
-ann/shotgun		dssgann
-ann/ssg			dsssgann
-ann/chaingun	dscgann
-ann/rlauncher	dsrlann
-ann/plasmagun	dspgann
-ann/bfg			dsbfgann
+ann/chainsaw    dscsann
+ann/shotgun     dssgann
+ann/ssg         dsssgann
+ann/chaingun    dscgann
+ann/rlauncher   dsrlann
+ann/plasmagun   dspgann
+ann/bfg         dsbfgann
 
-ann/backpack	dsbpkann
-ann/clip		dsclipan
-ann/ammo		dsaboxan
-ann/shells		dsshelan
-ann/shellbox	dssboxan
-ann/rocket		dsrktann
-ann/rocketbox	dsrboxan
-ann/cell		dscpakan
-ann/cellpack	dscpk2an
+ann/backpack    dsbpkann
+ann/clip        dsclipan
+ann/ammo        dsaboxan
+ann/shells      dsshelan
+ann/shellbox    dssboxan
+ann/rocket      dsrktann
+ann/rocketbox   dsrboxan
+ann/cell        dscpakan
+ann/cellpack    dscpk2an

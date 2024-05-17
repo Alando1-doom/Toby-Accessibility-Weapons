@@ -1,3 +1,0 @@
-#include decorate/DEC_WEAP
-#include decorate/DEC_AMMO
-#include decorate/DEC_PLAY

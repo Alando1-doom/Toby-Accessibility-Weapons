@@ -1,4 +1,4 @@
 GameInfo
 {
-	PlayerClasses = "Player_TO"
+    PlayerClasses = "Player_TO"
 }
