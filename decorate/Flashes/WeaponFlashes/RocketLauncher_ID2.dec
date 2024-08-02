@@ -3,10 +3,10 @@ ACTOR RocketLauncher_ID2 : BaseWeaponAndAmmoFlash
     States
     {
     Spawn:
-        TNT1 A 8 A_RadiusGive("RLAnn", 128, RGF_PLAYERS, 1)
+        TNT1 A 8 A_RadiusGive("GunChecker_RL", 128, RGF_PLAYERS, 1)
         Goto Death
     Death:
-        TNT1 A 8 A_RadiusGive("RLAnn", 128, RGF_PLAYERS, 1)
+        TNT1 A 8 A_RadiusGive("GunChecker_RL", 128, RGF_PLAYERS, 1)
         Stop
     }
 }

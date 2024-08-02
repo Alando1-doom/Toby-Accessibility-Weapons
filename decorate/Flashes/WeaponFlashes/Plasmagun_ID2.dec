@@ -3,10 +3,10 @@ ACTOR Plasmagun_ID2 : BaseWeaponAndAmmoFlash
     States
     {
     Spawn:
-        TNT1 A 8 A_RadiusGive("PlasmagunAnn", 128, RGF_PLAYERS, 1)
+        TNT1 A 8 A_RadiusGive("GunChecker_PR", 128, RGF_PLAYERS, 1)
         Goto Death
     Death:
-        TNT1 A 8 A_RadiusGive("PlasmagunAnn", 128, RGF_PLAYERS, 1)
+        TNT1 A 8 A_RadiusGive("GunChecker_PR", 128, RGF_PLAYERS, 1)
         Stop
     }
 }
