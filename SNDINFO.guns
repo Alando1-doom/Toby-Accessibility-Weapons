@@ -5,18 +5,18 @@ weapons/fistup              dsfistup
 weapons/pistolup            dspisup
 
 //Chainsaw
-weapons/chainsaw_pkup       dscspk2
+weapons/chainsaw_pkup       dscsawpk
 
 //Shotgun
 weapons/shotup              dsshotpk
-weapons/shotgun_pkup        dssgpk2
+weapons/shotgun_pkup        dsshotpk
 $rolloff weapons/sgbeacon   linear 56 300
 $volume weapons/sgbeacon    0.75
 weapons/sgbeacon            sgbcn
 
 //Boomstick!
 weapons/ssgup               dsssgpk
-weapons/ssg_pkup            dsssgpk2
+weapons/ssg_pkup            dsgetssg
 $rolloff weapons/ssgbeacon  linear 56 300
 $volume weapons/ssgbeacon   0.75
 weapons/ssgbeacon           ssgbcn
@@ -24,28 +24,28 @@ weapons/ssgbeacon           ssgbcn
 //Chaingun
 weapons/chaing              dscgfir
 weapons/chaingunup          dscgup
-weapons/chaingun_pkup       dscgpk2
+weapons/chaingun_pkup       dscgpk
 $rolloff weapons/cgbeacon   linear 56 300
 $volume weapons/cgbeacon    0.5
 weapons/cgbeacon            cgbcn
 
 //Rocket Launcher
 weapons/rocketup            dsrckup
-weapons/rocket_pkup         dsrlpk2
+weapons/rocket_pkup         dsrckpk
 $rolloff weapons/rlbeacon   linear 56 300
 $volume weapons/rlbeacon    0.5
 weapons/rlbeacon            rlbcn
 
 //Plasmagun
 weapons/plasmaup            dsplasup
-weapons/plasma_pkup         dsprpk2
+weapons/plasma_pkup         dsplaspk
 $rolloff weapons/prbeacon   linear	56 300
 $volume weapons/prbeacon    0.5
 weapons/prbeacon            prbcn
 
 //BFG 9000
 weapons/bfgup               dsbfgup
-weapons/bfg_pkup            dsbfgpk2
+weapons/bfg_pkup            dsbfgpk
 $rolloff weapons/bfgbeacon  linear	56 300
 $volume weapons/bfgbeacon   0.5
 weapons/bfgbeacon           bfgbcn

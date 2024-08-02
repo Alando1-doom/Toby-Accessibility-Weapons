@@ -109,3 +109,11 @@
 #include "decorate/Projectiles/PlasmaBall_TO.dec"
 #include "decorate/Projectiles/RocketTrail_TO.dec"
 #include "decorate/Projectiles/Rocket_TO.dec"
+
+//Gun Checkers
+#include "decorate/GunCheckers/GunChecker_Shotgun.dec"
+#include "decorate/GunCheckers/GunChecker_SSG.dec"
+#include "decorate/GunCheckers/GunChecker_Chaingun.dec"
+#include "decorate/GunCheckers/GunChecker_RL.dec"
+#include "decorate/GunCheckers/GunChecker_PR.dec"
+#include "decorate/GunCheckers/GunChecker_BFG.dec"

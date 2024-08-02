@@ -3,10 +3,10 @@ ACTOR Shotgun_ID2 : BaseWeaponAndAmmoFlash
     States
     {
     Spawn:
-        TNT1 A 8 A_RadiusGive("ShotgunAnn", 128, RGF_PLAYERS, 1)
+        TNT1 A 8 A_RadiusGive("GunChecker_Shotgun", 128, RGF_PLAYERS, 1)
         Goto Death
     Death:
-        TNT1 A 8 A_RadiusGive("ShotgunAnn", 128, RGF_PLAYERS, 1)
+        TNT1 A 8 A_RadiusGive("GunChecker_Shotgun", 128, RGF_PLAYERS, 1)
         Stop
     }
 }
