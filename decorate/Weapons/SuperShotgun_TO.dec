@@ -13,6 +13,7 @@ ACTOR SuperShotgun_TO : DoomWeapon Replaces SuperShotgun
     Obituary "$OB_MPSSHOTGUN"
     Tag "$TAG_SUPERSHOTGUN"
     Weapon.SlotNumber 3
+	Inventory.RespawnTics 105
     Decal BulletChip
     States
     {
