@@ -7,6 +7,7 @@ ACTOR Shotgun_TO : DoomWeapon Replaces Shotgun
     Weapon.AmmoGive 8
     Weapon.AmmoType "Shell"
     Weapon.SlotNumber 3
+	Inventory.RespawnTics 105
     AttackSound "weapons/shotgf"
     Weapon.UpSound "weapons/shotup"
     Inventory.PickupSound "weapons/shotgun_pkup"

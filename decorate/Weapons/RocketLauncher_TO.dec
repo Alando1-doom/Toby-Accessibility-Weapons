@@ -10,6 +10,7 @@ ACTOR RocketLauncher_TO : DoomWeapon Replaces RocketLauncher
     Inventory.PickupSound "weapons/rocket_pkup"
     //Inventory.PickupFlash "RocketLauncher_ID2"
     Weapon.SlotNumber 5
+	Inventory.RespawnTics 105
     +WEAPON.NOAUTOFIRE
     Inventory.PickupMessage "$GOTLAUNCHER"
     Tag "$TAG_ROCKETLAUNCHER"

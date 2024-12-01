@@ -11,6 +11,7 @@ ACTOR BFG9000_TO : DoomWeapon Replaces BFG9000
     //Inventory.PickupFlash "BFG_ID2"
     Inventory.PickupSound "weapons/bfg_pkup"
     Weapon.SlotNumber 7
+	Inventory.RespawnTics 105
     +WEAPON.NOAUTOFIRE
     Inventory.PickupMessage "$GOTBFG9000"
     Tag "$TAG_BFG9000"

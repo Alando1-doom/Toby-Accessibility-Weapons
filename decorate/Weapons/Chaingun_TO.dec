@@ -7,6 +7,7 @@ ACTOR Chaingun_TO : DoomWeapon Replaces Chaingun
     Weapon.AmmoGive 20
     Weapon.AmmoType "Clip"
     Weapon.SlotNumber 4
+	Inventory.RespawnTics 105
     AttackSound "weapons/chaing"
     Weapon.UpSound "weapons/chaingunup"
     //Inventory.PickupFlash "Chaingun_ID2"

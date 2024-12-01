@@ -10,6 +10,7 @@ ACTOR PlasmaRifle_TO : DoomWeapon Replaces PlasmaRifle
     //Inventory.PickupFlash "Plasmagun_ID2"
     Inventory.PickupSound "weapons/plasma_pkup"
     Weapon.SlotNumber 6
+	Inventory.RespawnTics 105
     Inventory.PickupMessage "$GOTPLASMA"
     Tag "$TAG_PLASMARIFLE"
     States
