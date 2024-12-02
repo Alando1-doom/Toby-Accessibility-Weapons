@@ -1,9 +1,0 @@
-ACTOR BFGAnn : BaseWeaponAndAmmoAnnouncer
-{
-    States
-    {
-    Pickup:
-        TNT1 A 1 A_PlaySoundEx("ann/bfg", "WeaponSlot7", 0, -1)
-        Stop
-    }
-}

@@ -1,9 +1,0 @@
-ACTOR CellPackAnn : BaseWeaponAndAmmoAnnouncer
-{
-    States
-    {
-    Pickup:
-        TNT1 A 1 A_PlaySoundEx("ann/cellpack", "WeaponSlot7", 0, -1)
-        Stop
-    }
-}

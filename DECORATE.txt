@@ -1,0 +1,59 @@
+//Player
+#include "decorate/Player/Player_TO.dec"
+
+//Base classes
+#include "decorate/PickupCheckers/BasePickupAndAmmoChecker.dec"
+
+//Weapons
+#include "decorate/Weapons/BFG9000_TO.dec"
+#include "decorate/Weapons/Chaingun_TO.dec"
+#include "decorate/Weapons/Chainsaw_TO.dec"
+#include "decorate/Weapons/Fist_TO.dec"
+#include "decorate/Weapons/Pistol_TO.dec"
+#include "decorate/Weapons/PlasmaRifle_TO.dec"
+#include "decorate/Weapons/RocketLauncher_TO.dec"
+#include "decorate/Weapons/Shotgun_TO.dec"
+#include "decorate/Weapons/SuperShotgun_TO.dec"
+
+//Weapon pickup checkers
+#include "decorate/PickupCheckers/WeaponPickupCheckers/BFGPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/ChaingunPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/PlasmagunPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/RocketLauncherPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/ShotgunPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/SSGPickupChecker.dec"
+#include "decorate/PickupCheckers/WeaponPickupCheckers/WeaponPickupChecker.dec"
+
+//Ammo
+#include "decorate/Ammo/CellPack_Toby.dec"
+#include "decorate/Ammo/Cell_Toby.dec"
+#include "decorate/Ammo/ClipBox_Toby.dec"
+#include "decorate/Ammo/Clip_Toby.dec"
+#include "decorate/Ammo/Clip_Toby_Zombie.dec"
+#include "decorate/Ammo/RocketAmmo_Toby.dec"
+#include "decorate/Ammo/RocketBox_Toby.dec"
+#include "decorate/Ammo/ShellBox_Toby.dec"
+#include "decorate/Ammo/Shell_Toby.dec"
+
+//Ammo pickup checkers
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_AmmoBox.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_Cell.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_CellPack.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_Clip.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_Rocket.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_RocketBox.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_Shell.dec"
+#include "decorate/PickupCheckers/AmmoPickupCheckers/AmmoPickupChecker_ShellBox.dec"
+
+//Pickups
+#include "decorate/Pickups/Backpack_TO.dec"
+
+//Pickup pickup checkers
+#include "decorate/PickupCheckers/PickupPickupCheckers/BPackPickupChecker.dec"
+
+//Projectiles
+#include "decorate/Projectiles/BFGBall_Toby.dec"
+#include "decorate/Projectiles/PlasmaBall_TO.dec"
+#include "decorate/Projectiles/RocketTrail_TO.dec"
+#include "decorate/Projectiles/Rocket_TO.dec"

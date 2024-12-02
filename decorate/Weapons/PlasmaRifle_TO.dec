@@ -1,13 +1,10 @@
-ACTOR PlasmaRifle_TO : DoomWeapon Replaces PlasmaRifle
+ACTOR PlasmaRifle_TO : DoomWeapon
 {
-    Game Doom
-    SpawnID 30
     Weapon.SelectionOrder 100
     Weapon.AmmoUse 1
     Weapon.AmmoGive 40
     Weapon.AmmoType "Cell"
     Weapon.UpSound "weapons/plasmaup"
-    //Inventory.PickupFlash "Plasmagun_ID2"
     Inventory.PickupSound "weapons/plasma_pkup"
     Weapon.SlotNumber 6
     Inventory.PickupMessage "$GOTPLASMA"
@@ -35,11 +32,46 @@ ACTOR PlasmaRifle_TO : DoomWeapon Replaces PlasmaRifle
         PLSF B 4 Bright A_Light1
         Goto LightDone
     Spawn:
-		PLAS AAAA 4 A_RadiusGive("GunChecker_PR", 96, RGF_PLAYERS, 1)
-		PLAS A 1 A_RadiusGive("GunChecker_PR", 96, RGF_PLAYERS, 1)
-        PLAS A 0 A_SpawnItemEx("PlasmagunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        PLAS A 1 A_RadiusGive("GunChecker_PR", 96, RGF_PLAYERS, 1)
-		PLAS AAAA 4 A_RadiusGive("GunChecker_PR", 96, RGF_PLAYERS, 1)
+		PLAS A 1 A_SpawnItemEx("PlasmagunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        PLAS AA 25 
         Loop
+    }
+}
+
+
+ACTOR PlasmaRifle_Giver : CustomInventory replaces PlasmaRifle
+{
+	Game Doom
+    SpawnID 30
+    Inventory.PickupMessage "$GOTPLASMA"
+	Inventory.RespawnTics 105
+	Inventory.PickupSound ""
+    States
+    {
+    Spawn:
+        PLAS A 1 A_SpawnItemEx("PlasmagunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        PLAS AA 25 
+        Loop
+    Pickup:
+		TNT1 A 1 A_JumpIfInventory("PlasmaRifle_TO", 1, "HasPR")
+        TNT1 A 1 A_GiveInventory("PlasmaRifle_TO", 1)
+		TNT1 A 1 A_PlaySoundEx("weapons/plasma_pkup", "Auto", 0, -1)
+        Stop
+	HasPR:
+		TNT1 A 1 A_JumpIfInventory("Backpack_TO", 1, "HasBP")
+        TNT1 A 1 A_JumpIfInventory("Cell", 300, "NoPickup")
+        TNT1 A 1 A_GiveInventory("Cell", 40)
+		TNT1 A 1 A_PlaySoundEx("weapons/plasma_pkup", "Auto", 0, -1)
+		TNT1 A 1 A_PlaySoundEx("ann/plasmagun", "Auto", 0, -1)
+		Stop
+    HasBP:
+        TNT1 A 1 A_JumpIfInventory("Cell", 600, "NoPickup")
+        TNT1 A 1 A_GiveInventory("Cell", 40)
+		TNT1 A 1 A_PlaySoundEx("weapons/plasma_pkup", "Auto", 0, -1)
+		TNT1 A 1 A_PlaySoundEx("ann/plasmagun", "Auto", 0, -1)
+        Stop
+    NoPickup:
+        TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 0)
+        Fail
     }
 }
