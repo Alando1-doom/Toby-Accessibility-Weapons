@@ -1,14 +1,11 @@
-ACTOR RocketLauncher_TO : DoomWeapon Replaces RocketLauncher
+ACTOR RocketLauncher_TO : DoomWeapon
 {
-    Game Doom
-    SpawnID 29
     Weapon.SelectionOrder 2500
     Weapon.AmmoUse 1
     Weapon.AmmoGive 2
     Weapon.AmmoType "RocketAmmo"
     Weapon.UpSound "weapons/rocketup"
     Inventory.PickupSound "weapons/rocket_pkup"
-    //Inventory.PickupFlash "RocketLauncher_ID2"
     Weapon.SlotNumber 5
 	Inventory.RespawnTics 105
     +WEAPON.NOAUTOFIRE
@@ -38,11 +35,46 @@ ACTOR RocketLauncher_TO : DoomWeapon Replaces RocketLauncher
         MISF CD 1 Bright A_Light2
         Goto LightDone
     Spawn:
-		LAUN AAAA 4 A_RadiusGive("GunChecker_RL", 96, RGF_PLAYERS, 1)
-		LAUN A 1 A_RadiusGive("GunChecker_RL", 96, RGF_PLAYERS, 1)
-        LAUN A 0 A_SpawnItemEx("RocketLauncherPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        LAUN A 1 A_RadiusGive("GunChecker_RL", 96, RGF_PLAYERS, 1)
-		LAUN AAAA 4 A_RadiusGive("GunChecker_RL", 96, RGF_PLAYERS, 1)
+		LAUN A 1 A_SpawnItemEx("RocketLauncherPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        LAUN AA 25 
         Loop
+    }
+}
+
+
+ACTOR RocketLauncher_Giver : CustomInventory replaces RocketLauncher
+{
+	Game Doom
+    SpawnID 29
+    Inventory.PickupMessage "$GOTLAUNCHER"
+	Inventory.RespawnTics 105
+	Inventory.PickupSound ""
+    States
+    {
+    Spawn:
+        LAUN A 1 A_SpawnItemEx("RocketLauncherPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        LAUN AA 25 
+        Loop
+    Pickup:
+		TNT1 A 1 A_JumpIfInventory("RocketLauncher_TO", 1, "HasRL")
+        TNT1 A 1 A_GiveInventory("RocketLauncher_TO", 1)
+		TNT1 A 1 A_PlaySoundEx("weapons/rocket_pkup", "Auto", 0, -1)
+        Stop
+	HasRL:
+		TNT1 A 1 A_JumpIfInventory("Backpack_TO", 1, "HasBP")
+        TNT1 A 1 A_JumpIfInventory("RocketAmmo", 50, "NoPickup")
+        TNT1 A 1 A_GiveInventory("RocketAmmo", 2)
+		TNT1 A 1 A_PlaySoundEx("weapons/rocket_pkup", "Auto", 0, -1)
+		TNT1 A 1 A_PlaySoundEx("ann/rlauncher", "Auto", 0, -1)
+		Stop
+    HasBP:
+        TNT1 A 1 A_JumpIfInventory("RocketAmmo", 100, "NoPickup")
+        TNT1 A 1 A_GiveInventory("RocketAmmo", 2)
+		TNT1 A 1 A_PlaySoundEx("weapons/rocket_pkup", "Auto", 0, -1)
+		TNT1 A 1 A_PlaySoundEx("ann/rlauncher", "Auto", 0, -1)
+        Stop
+    NoPickup:
+        TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 0)
+        Fail
     }
 }

@@ -1,9 +1,0 @@
-Actor ShellsAnn : BaseWeaponAndAmmoAnnouncer
-{
-    States
-    {
-    Pickup:
-        TNT1 A 1 A_PlaySoundEx("ann/shells", "WeaponSlot7", 0, -1)
-        Stop
-    }
-}

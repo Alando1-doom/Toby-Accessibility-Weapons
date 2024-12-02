@@ -7,7 +7,6 @@ ACTOR Chainsaw_TO : Weapon replaces Chainsaw
     Weapon.UpSound "weapons/sawup"
     Weapon.ReadySound "weapons/sawidle"
     Inventory.PickupSound "weapons/chainsaw_pkup"
-    //Inventory.PickupFlash "Chainsaw_ID2"
     Weapon.SlotNumber 1
 	Inventory.RespawnTics 105
     Inventory.PickupMessage "$GOTCHAINSAW"

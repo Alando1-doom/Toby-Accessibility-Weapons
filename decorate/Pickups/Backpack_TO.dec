@@ -1,12 +1,32 @@
-ACTOR Backpack_TO : Backpack replaces Backpack
+ACTOR Backpack_TO : Backpack
 {
     Inventory.PickupSound "misc/bpack"
-    Inventory.PickupFlash "BPack_ID2"
     States
     {
     Spawn:
-        BPAK A 19 A_SpawnItemEx("BPackPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        BPAK A 1
+        BPAK A 1 A_SpawnItemEx("BPackPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        BPAK AA 25
         Loop
+    }
+}
+
+
+ACTOR Backpack_Giver : CustomInventory replaces Backpack
+{
+	Game Doom
+	SpawnID 144
+	Height 26
+    Inventory.PickupMessage "$GOTBACKPACK"
+    Inventory.PickupSound "misc/bpack"
+    States
+    {
+    Spawn:
+        BPAK A 1 A_SpawnItemEx("BPackPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        BPAK AA 25
+        Loop
+    Pickup:
+        TNT1 A 1 A_GiveInventory("Backpack_TO", 1)
+		TNT1 A 1 A_PlaySoundEx("ann/backpack", "SoundSlot7", 0, -1)
+        Stop
     }
 }

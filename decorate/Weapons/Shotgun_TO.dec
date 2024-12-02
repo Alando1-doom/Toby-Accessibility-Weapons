@@ -1,7 +1,5 @@
-ACTOR Shotgun_TO : DoomWeapon Replaces Shotgun
+ACTOR Shotgun_TO : DoomWeapon
 {
-    Game Doom
-    SpawnID 27
     Weapon.SelectionOrder 1300
     Weapon.AmmoUse 1
     Weapon.AmmoGive 8
@@ -11,7 +9,6 @@ ACTOR Shotgun_TO : DoomWeapon Replaces Shotgun
     AttackSound "weapons/shotgf"
     Weapon.UpSound "weapons/shotup"
     Inventory.PickupSound "weapons/shotgun_pkup"
-    //Inventory.PickupFlash "Shotgun_ID2"
     Inventory.PickupMessage "$GOTSHOTGUN"
     Obituary "$OB_MPSHOTGUN"
     Tag "$TAG_SHOTGUN"
@@ -41,11 +38,47 @@ ACTOR Shotgun_TO : DoomWeapon Replaces Shotgun
         SHTF B 3 Bright A_Light2
         Goto LightDone
     Spawn:
-		SHOT AAAA 4 A_RadiusGive("GunChecker_Shotgun", 96, RGF_PLAYERS, 1)
-		SHOT A 1 A_RadiusGive("GunChecker_Shotgun", 96, RGF_PLAYERS, 1)
-		SHOT A 0 A_SpawnItemEx("ShotgunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		SHOT A 1 A_RadiusGive("GunChecker_Shotgun", 96, RGF_PLAYERS, 1)
-		SHOT AAAA 4 A_RadiusGive("GunChecker_Shotgun", 96, RGF_PLAYERS, 1)
+		SHOT A 1 A_SpawnItemEx("ShotgunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        SHOT AA 25 
         Loop
+    }
+}
+
+
+ACTOR Shotgun_Giver : CustomInventory replaces Shotgun
+{
+	Game Doom
+    SpawnID 27
+    Inventory.PickupMessage "$GOTSHOTGUN"
+	Inventory.RespawnTics 105
+	Inventory.PickupSound ""
+	Scale 0.85
+    States
+    {
+    Spawn:
+        SHOT A 1 A_SpawnItemEx("ShotgunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+        SHOT AA 25 
+        Loop
+    Pickup:
+		TNT1 A 1 A_JumpIfInventory("Shotgun_TO", 1, "HasShotgun")
+        TNT1 A 1 A_GiveInventory("Shotgun_TO", 1)
+		TNT1 A 1 A_PlaySoundEx("weapons/shotgun_pkup", "Auto", 0, -1)
+        Stop
+	HasShotgun:
+		TNT1 A 1 A_JumpIfInventory("Backpack_TO", 1, "HasBP")
+        TNT1 A 1 A_JumpIfInventory("Shell", 50, "NoPickup")
+        TNT1 A 1 A_GiveInventory("Shell", 4)
+		TNT1 A 1 A_PlaySoundEx("weapons/shotgun_pkup", "Auto", 0, -1)
+		TNT1 A 1 A_PlaySoundEx("ann/shotgun", "Auto", 0, -1)
+		Stop
+    HasBP:
+        TNT1 A 1 A_JumpIfInventory("Shell", 100, "NoPickup")
+        TNT1 A 1 A_GiveInventory("Shell", 4)
+		TNT1 A 1 A_PlaySoundEx("weapons/shotgun_pkup", "Auto", 0, -1)
+		TNT1 A 1 A_PlaySoundEx("ann/shotgun", "Auto", 0, -1)
+        Stop
+    NoPickup:
+        TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 0)
+        Fail
     }
 }
