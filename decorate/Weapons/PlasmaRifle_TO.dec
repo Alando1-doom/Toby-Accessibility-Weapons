@@ -34,7 +34,7 @@ ACTOR PlasmaRifle_TO : DoomWeapon
         Goto LightDone
     Spawn:
 		PLAS A 1 A_SpawnItemEx("PlasmagunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        PLAS AA 25 
+        PLAS AA 18
         Loop
     }
 }
@@ -51,7 +51,7 @@ ACTOR PlasmaRifle_Giver : CustomInventory replaces PlasmaRifle
     {
     Spawn:
         PLAS A 1 A_SpawnItemEx("PlasmagunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        PLAS AA 25 
+        PLAS AA 18 
         Loop
     Pickup:
 		TNT1 A 1 A_JumpIfInventory("PlasmaRifle_TO", 1, "HasPR")

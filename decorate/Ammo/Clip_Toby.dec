@@ -6,7 +6,7 @@ ACTOR Clip_Toby : CustomInventory replaces Clip
     {
     Spawn:
         CLIP A 1 A_SpawnItemEx("AmmoPickupChecker_Clip", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        CLIP AA 25
+        CLIP AA 18
         Loop
     Pickup:
         TNT1 A 1 A_JumpIfInventory("Backpack_TO", 1, "HasBP")

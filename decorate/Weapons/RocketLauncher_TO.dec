@@ -36,7 +36,7 @@ ACTOR RocketLauncher_TO : DoomWeapon
         Goto LightDone
     Spawn:
 		LAUN A 1 A_SpawnItemEx("RocketLauncherPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        LAUN AA 25 
+        LAUN AA 18
         Loop
     }
 }
@@ -53,7 +53,7 @@ ACTOR RocketLauncher_Giver : CustomInventory replaces RocketLauncher
     {
     Spawn:
         LAUN A 1 A_SpawnItemEx("RocketLauncherPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        LAUN AA 25 
+        LAUN AA 18
         Loop
     Pickup:
 		TNT1 A 1 A_JumpIfInventory("RocketLauncher_TO", 1, "HasRL")

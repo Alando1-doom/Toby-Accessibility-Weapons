@@ -41,7 +41,7 @@ ACTOR Chaingun_TO : DoomWeapon
         Stop
     Spawn:
 		MGUN A 1 A_SpawnItemEx("ChaingunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        MGUN AA 25 
+        MGUN AA 18
         Loop
     }
 }
@@ -58,7 +58,7 @@ ACTOR Chaingun_Giver : CustomInventory replaces Chaingun
     {
     Spawn:
         MGUN A 1 A_SpawnItemEx("ChaingunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        MGUN AA 25 
+        MGUN AA 18 
         Loop
     Pickup:
 		TNT1 A 1 A_JumpIfInventory("Chaingun_TO", 1, "HasChaingun")

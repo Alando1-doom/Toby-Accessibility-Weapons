@@ -47,7 +47,7 @@ ACTOR SuperShotgun_TO : DoomWeapon
         Goto LightDone
     Spawn:
 		SGN2 A 1 A_SpawnItemEx("SSGPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        SGN2 AA 25 
+        SGN2 AA 18
         Loop
     }
 }
@@ -64,7 +64,7 @@ ACTOR SSG_Giver : CustomInventory replaces SuperShotgun
     {
     Spawn:
         SGN2 A 1 A_SpawnItemEx("SSGPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        SGN2 AA 25 
+        SGN2 AA 18 
         Loop
     Pickup:
 		TNT1 A 1 A_JumpIfInventory("SuperShotgun_TO", 1, "HasSSG")
