@@ -6,7 +6,7 @@ ACTOR Shell_Toby : CustomInventory replaces Shell
     {
     Spawn:
         SHEL A 1 A_SpawnItemEx("AmmoPickupChecker_Shell", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        SHEL AA 25
+        SHEL AA 18
         Loop
     Pickup:
         TNT1 A 1 A_JumpIfInventory("Backpack_TO", 1, "HasBP")

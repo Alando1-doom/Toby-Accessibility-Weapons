@@ -5,7 +5,7 @@ ACTOR Backpack_TO : Backpack
     {
     Spawn:
         BPAK A 1 A_SpawnItemEx("BPackPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        BPAK AA 25
+        BPAK AA 18
         Loop
     }
 }
@@ -22,7 +22,7 @@ ACTOR Backpack_Giver : CustomInventory replaces Backpack
     {
     Spawn:
         BPAK A 1 A_SpawnItemEx("BPackPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        BPAK AA 25
+        BPAK AA 18
         Loop
     Pickup:
         TNT1 A 1 A_GiveInventory("Backpack_TO", 1)

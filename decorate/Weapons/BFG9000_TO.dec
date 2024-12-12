@@ -39,7 +39,7 @@ ACTOR BFG9000_TO : DoomWeapon
         Goto LightDone
     Spawn:
 		BFUG A 1 A_SpawnItemEx("BFGPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        BFUG AA 25 
+        BFUG AA 18
         Loop
     }
 }
@@ -58,7 +58,7 @@ ACTOR BFG9000_Giver : CustomInventory replaces BFG9000
     {
     Spawn:
         BFUG A 1 A_SpawnItemEx("BFGPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        BFUG AA 25 
+        BFUG AA 18
         Loop
     Pickup:
 		TNT1 A 1 A_JumpIfInventory("BFG9000_TO", 1, "HasBFG")

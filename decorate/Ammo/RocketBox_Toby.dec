@@ -6,7 +6,7 @@ ACTOR RocketBox_Toby : CustomInventory replaces RocketBox
     {
     Spawn:
         BROK A 1 A_SpawnItemEx("AmmoPickupChecker_RocketBox", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        BROK AA 25
+        BROK AA 18
         Loop
     Pickup:
         TNT1 A 1 A_JumpIfInventory("Backpack_TO", 1, "HasBP")

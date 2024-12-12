@@ -39,7 +39,7 @@ ACTOR Shotgun_TO : DoomWeapon
         Goto LightDone
     Spawn:
 		SHOT A 1 A_SpawnItemEx("ShotgunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        SHOT AA 25 
+        SHOT AA 18 
         Loop
     }
 }
@@ -57,7 +57,7 @@ ACTOR Shotgun_Giver : CustomInventory replaces Shotgun
     {
     Spawn:
         SHOT A 1 A_SpawnItemEx("ShotgunPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        SHOT AA 25 
+        SHOT AA 18
         Loop
     Pickup:
 		TNT1 A 1 A_JumpIfInventory("Shotgun_TO", 1, "HasShotgun")

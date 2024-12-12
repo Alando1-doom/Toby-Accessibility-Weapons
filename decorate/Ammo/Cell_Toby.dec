@@ -6,7 +6,7 @@ ACTOR Cell_Toby : CustomInventory replaces Cell
     {
     Spawn:
         CELL A 1 A_SpawnItemEx("AmmoPickupChecker_Cell", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-        CELL AA 25
+        CELL AA 18
         Loop
     Pickup:
         TNT1 A 1 A_JumpIfInventory("Backpack_TO", 1, "HasBP")
