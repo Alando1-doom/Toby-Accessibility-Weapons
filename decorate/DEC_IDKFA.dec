@@ -1,0 +1,17 @@
+Actor IDKFA_ChooseGame : CheatGiverBase
+{
+	States
+	{
+	Pickup:
+		TNT1 A 1 A_GiveInventory("BlueArmor_TO")
+		TNT1 A 1 A_GiveInventory("Backpack_TO")
+		TNT1 A 1 A_GiveInventory("Chainsaw_TO")
+		TNT1 A 1 A_GiveInventory("BFG9000_TO")
+		TNT1 A 1 A_GiveInventory("PlasmaRifle_TO")
+		TNT1 A 1 A_GiveInventory("RocketLauncher_TO")
+		TNT1 A 1 A_GiveInventory("Chaingun_TO")
+		TNT1 A 1 A_GiveInventory("SuperShotgun_TO")
+		TNT1 A 1 A_GiveInventory("Shotgun_TO")
+		Stop
+	}
+}

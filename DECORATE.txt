@@ -57,3 +57,7 @@
 #include "decorate/Projectiles/PlasmaBall_TO.dec"
 #include "decorate/Projectiles/RocketTrail_TO.dec"
 #include "decorate/Projectiles/Rocket_TO.dec"
+
+//IDKFA Cheat
+#include "decorate/DEC_IDKFA.dec"
+
