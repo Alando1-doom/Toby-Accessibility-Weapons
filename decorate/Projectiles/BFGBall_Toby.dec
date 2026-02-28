@@ -16,10 +16,13 @@ ACTOR BFGBall_Toby replaces BFGBall
     States
     {
     Spawn:
-        BFS1 AB 4 Bright
+		BFS1 A 4 Bright A_PlaySoundEx("projectiles/bfgball", "Auto", 1, 0)
+        BFS1 B 4 Bright
         Loop
     Death:
-        BFE1 AB 8 Bright
+		BFE1 A 4 Bright A_StopSound
+        BFE1 A 4 Bright A_PlaySoundEx("weapons/bfgx", "Auto", 0, 0)
+		BFE1 B 8 Bright
         BFE1 C 8 Bright A_BFGSpray
         BFE1 DEF 8 Bright
         Stop

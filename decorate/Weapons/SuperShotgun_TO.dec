@@ -60,6 +60,7 @@ ACTOR SSG_Giver : CustomInventory replaces SuperShotgun
     Inventory.PickupMessage "$GOTSHOTGUN2"
 	Inventory.RespawnTics 105
 	Inventory.PickupSound ""
+	Tag "$TAG_SUPERSHOTGUN"
     States
     {
     Spawn:

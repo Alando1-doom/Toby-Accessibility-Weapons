@@ -83,21 +83,19 @@ prox/hot        dshot
 misc/bpack      dsbpack
 misc/ammo_pkup  dsammoup
 
-//Announcer
-ann/chainsaw    dscsann
-ann/shotgun     dssgann
-ann/ssg         dsssgann
-ann/chaingun    dscgann
-ann/rlauncher   dsrlann
-ann/plasmagun   dspgann
-ann/bfg         dsbfgann
+ammo/pickup/clip				pkclip
+ammo/pickup/bullets			pkbullet
+ammo/pickup/shells				pkshell
+ammo/pickup/shellbox			pksbox
+ammo/pickup/rocket			pkrocket
+ammo/pickup/rocketbox		pkrockbx
+ammo/pickup/cell				pkcell
+ammo/pickup/bulkcell			pkblkcel
 
-ann/backpack    dsbpkann
-ann/clip        dsclipan
-ann/ammo        dsaboxan
-ann/shells      dsshelan
-ann/shellbox    dssboxan
-ann/rocket      dsrktann
-ann/rocketbox   dsrboxan
-ann/cell        dscpakan
-ann/cellpack    dscpk2an
+//Projectile Sounds
+projectiles/rocket		plyrckt
+$rolloff projectiles/rocket           linear 64 1000
+projectiles/plasma	plyplas
+$rolloff projectiles/plasma           linear 64 1000
+projectiles/bfgball	bfgball
+$rolloff projectiles/bfgball           linear 64 1000

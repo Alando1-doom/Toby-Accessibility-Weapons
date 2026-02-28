@@ -54,6 +54,7 @@ ACTOR Chaingun_Giver : CustomInventory replaces Chaingun
     Inventory.PickupMessage "$GOTCHAINGUN"
 	Inventory.RespawnTics 105
 	Inventory.PickupSound ""
+	Tag "$TAG_CHAINGUN"
     States
     {
     Spawn:

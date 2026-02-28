@@ -1,7 +1,8 @@
 ACTOR RocketBox_Toby : CustomInventory replaces RocketBox
 {
     Inventory.PickupMessage "$GOTROCKBOX"
-    Inventory.PickupSound "misc/ammo_pkup"
+    Inventory.PickupSound "ammo/pickup/rocketbox"
+	Tag "Box of Rockets"
     States
     {
     Spawn:

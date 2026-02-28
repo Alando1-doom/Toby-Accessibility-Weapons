@@ -49,6 +49,7 @@ ACTOR RocketLauncher_Giver : CustomInventory replaces RocketLauncher
     Inventory.PickupMessage "$GOTLAUNCHER"
 	Inventory.RespawnTics 105
 	Inventory.PickupSound ""
+	Tag "$TAG_ROCKETLAUNCHER"
     States
     {
     Spawn:

@@ -47,6 +47,7 @@ ACTOR PlasmaRifle_Giver : CustomInventory replaces PlasmaRifle
     Inventory.PickupMessage "$GOTPLASMA"
 	Inventory.RespawnTics 105
 	Inventory.PickupSound ""
+	Tag "$TAG_PLASMARIFLE"
     States
     {
     Spawn:

@@ -19,10 +19,13 @@ ACTOR PlasmaBall_TO replaces PlasmaBall
     States
     {
     Spawn:
-        DLSR ABCDEFGHIJKLMOP 1 Bright
+		DLSR A 1 Bright A_PlaySoundEx("projectiles/plasma", "Auto", 1, 0)
+        DLSR BCDEFGHIJKLMOP 1 Bright
         Loop
     Death:
-        PLSE ABCDE 4 Bright
+		PLSE A 2 Bright A_StopSound
+		PLSE A 2 Bright A_PlaySoundEx("weapons/plasmax", "Auto", 0, 0)
+        PLSE BCDE 4 Bright
         Stop
     }
 }
