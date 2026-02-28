@@ -1,7 +1,8 @@
 ACTOR CellPack_Toby : CustomInventory replaces CellPack
 {
     Inventory.PickupMessage "$GOTCELLBOX"
-    Inventory.PickupSound "misc/ammo_pkup"
+    Inventory.PickupSound "ammo/pickup/bulkcell"
+	Tag "Bulk Cell Pack"
     States
     {
     Spawn:

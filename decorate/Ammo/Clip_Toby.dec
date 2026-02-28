@@ -1,7 +1,8 @@
 ACTOR Clip_Toby : CustomInventory replaces Clip
 {
     Inventory.PickupMessage "$GOTCLIP"
-    Inventory.PickupSound "misc/ammo_pkup"
+    Inventory.PickupSound "ammo/pickup/clip"
+	Tag "Clip"
     States
     {
     Spawn:

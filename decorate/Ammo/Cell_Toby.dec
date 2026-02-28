@@ -1,7 +1,8 @@
 ACTOR Cell_Toby : CustomInventory replaces Cell
 {
     Inventory.PickupMessage "$GOTCELL"
-    Inventory.PickupSound "misc/ammo_pkup"
+    Inventory.PickupSound "ammo/pickup/cell"
+	Tag "Cell"
     States
     {
     Spawn:

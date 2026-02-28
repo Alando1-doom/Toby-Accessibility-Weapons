@@ -18,6 +18,7 @@ ACTOR Backpack_Giver : CustomInventory replaces Backpack
 	Height 26
     Inventory.PickupMessage "$GOTBACKPACK"
     Inventory.PickupSound "misc/bpack"
+	Tag "Backpack"
     States
     {
     Spawn:

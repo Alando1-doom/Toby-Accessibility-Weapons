@@ -54,6 +54,7 @@ ACTOR BFG9000_Giver : CustomInventory replaces BFG9000
 	Inventory.RespawnTics 105
 	Inventory.PickupSound ""
 	Scale 0.8
+	Tag "$TAG_BFG9000"
     States
     {
     Spawn:

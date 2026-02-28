@@ -18,11 +18,14 @@ ACTOR Rocket_TO Replaces Rocket
     States
     {
     Spawn:
-        MISL A 1 Bright A_ThrowGrenade("RocketTrail_TO", -35, -2, 1)
+		MISL A 1 Bright A_PlaySoundEx("projectiles/rocket", "Auto", 1, 0)
+        MISL A 0 Bright A_ThrowGrenade("RocketTrail_TO", -35, -2, 1)
         Loop
     Death:
+		FRME B 0 Bright A_StopSound
         FRME B 1 Bright A_Explode
-        FRME CDEFGHIJKL 1 Bright
+		FRME C 1 Bright A_PlaySoundEx("weapons/rocklx", "Auto", 0, 0)
+        FRME DEFGHIJKL 1 Bright
         FRME MNOPQRS 1 Bright
         Stop
     }

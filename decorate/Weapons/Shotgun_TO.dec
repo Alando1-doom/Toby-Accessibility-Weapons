@@ -53,6 +53,7 @@ ACTOR Shotgun_Giver : CustomInventory replaces Shotgun
 	Inventory.RespawnTics 105
 	Inventory.PickupSound ""
 	Scale 0.85
+	Tag "$TAG_SHOTGUN"
     States
     {
     Spawn:

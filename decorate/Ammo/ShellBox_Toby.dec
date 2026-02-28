@@ -1,7 +1,8 @@
 ACTOR ShellBox_Toby : CustomInventory replaces ShellBox
 {
     Inventory.PickupMessage "$GOTSHELLBOX"
-    Inventory.PickupSound "misc/ammo_pkup"
+    Inventory.PickupSound "ammo/pickup/shellbox"
+	Tag "Box of Shells"
     States
     {
     Spawn:

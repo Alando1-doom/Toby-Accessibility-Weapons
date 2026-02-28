@@ -1,7 +1,8 @@
 ACTOR ClipBox_Toby : CustomInventory replaces ClipBox
 {
     Inventory.PickupMessage "$GOTCLIPBOX"
-    Inventory.PickupSound "misc/ammo_pkup"
+    Inventory.PickupSound "ammo/pickup/bullets"
+	Tag "Box of Ammo"
     States
     {
     Spawn:
