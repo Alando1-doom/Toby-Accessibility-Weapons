@@ -10,6 +10,7 @@ ACTOR PlasmaRifle_TO : DoomWeapon
 	Inventory.RespawnTics 105
     Inventory.PickupMessage "$GOTPLASMA"
     Tag "$TAG_PLASMARIFLE"
+	+WEAPON.CHEATNOTWEAPON
     States
     {
     Ready:
