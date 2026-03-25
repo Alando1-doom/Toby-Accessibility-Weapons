@@ -1,12 +1,9 @@
 ACTOR PlasmaBall_TO replaces PlasmaBall
 {
-    Game Doom
-    SpawnID 51
     Radius 13
     Height 8
     Speed 25
     Damage 5
-    Translation "112:127=192:201"
     Projectile
     +RANDOMIZE
     +THRUGHOST
@@ -19,8 +16,8 @@ ACTOR PlasmaBall_TO replaces PlasmaBall
     States
     {
     Spawn:
-		DLSR A 1 Bright A_PlaySoundEx("projectiles/plasma", "Auto", 1, 0)
-        DLSR BCDEFGHIJKLMOP 1 Bright
+		PLSS A 4 Bright A_PlaySoundEx("projectiles/plasma", "Auto", 1, 0)
+        PLSS B 4 Bright
         Loop
     Death:
 		PLSE A 2 Bright A_StopSound
