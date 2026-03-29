@@ -12,6 +12,7 @@ ACTOR SuperShotgun_TO : DoomWeapon
     Weapon.SlotNumber 3
 	Inventory.RespawnTics 105
     Decal BulletChip
+	+WEAPON.CHEATNOTWEAPON
     States
     {
     Ready:

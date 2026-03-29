@@ -12,6 +12,7 @@ ACTOR Chaingun_TO : DoomWeapon
     Inventory.PickupMessage "$GOTCHAINGUN"
     Obituary "$OB_MPCHAINGUN"
     Tag "$TAG_CHAINGUN"
+	+WEAPON.CHEATNOTWEAPON
     Decal BulletChip
     States
     {

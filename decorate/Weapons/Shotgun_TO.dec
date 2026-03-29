@@ -14,6 +14,7 @@ ACTOR Shotgun_TO : DoomWeapon
     Tag "$TAG_SHOTGUN"
     Decal BulletChip
     Scale 0.85
+	+WEAPON.CHEATNOTWEAPON
     States
     {
     Ready:
