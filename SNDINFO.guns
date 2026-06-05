@@ -94,8 +94,9 @@ ammo/pickup/bulkcell			pkblkcel
 
 //Projectile Sounds
 projectiles/rocket		plyrckt
-$rolloff projectiles/rocket           linear 64 1000
+$rolloff projectiles/rocket           linear 64 960
 projectiles/plasma	plyplas
-$rolloff projectiles/plasma           linear 64 1000
+$rolloff projectiles/plasma           linear 48 880
+$volume projectiles/plasma     0.5
 projectiles/bfgball	bfgball
-$rolloff projectiles/bfgball           linear 64 1000
+$rolloff projectiles/bfgball           linear 64 768
