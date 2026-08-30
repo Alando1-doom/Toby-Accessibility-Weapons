@@ -9,6 +9,7 @@ ACTOR Fist_TO : Weapon replaces Fist
     Weapon.SlotNumber 1
     +WEAPON.WIMPY_WEAPON
     +WEAPON.MELEEWEAPON
+	+WEAPON.CHEATNOTWEAPON
     States
     {
     Ready:

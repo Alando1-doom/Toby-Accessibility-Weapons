@@ -9,6 +9,7 @@ ACTOR RocketLauncher_TO : DoomWeapon
     Weapon.SlotNumber 5
 	Inventory.RespawnTics 105
     +WEAPON.NOAUTOFIRE
+	+WEAPON.CHEATNOTWEAPON
     Inventory.PickupMessage "$GOTLAUNCHER"
     Tag "$TAG_ROCKETLAUNCHER"
     States

@@ -13,6 +13,7 @@ ACTOR Chainsaw_TO : Weapon replaces Chainsaw
     Obituary "$OB_MPCHAINSAW"
     Tag "$TAG_CHAINSAW"
     +WEAPON.MELEEWEAPON
+	+WEAPON.CHEATNOTWEAPON
     States
     {
     Ready:

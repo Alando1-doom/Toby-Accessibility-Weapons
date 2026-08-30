@@ -10,6 +10,7 @@ ACTOR Pistol_TO : Weapon replaces Pistol
     AttackSound "weapons/pistol"
     Obituary "$OB_MPPISTOL"
     +WEAPON.WIMPY_WEAPON
+	+WEAPON.CHEATNOTWEAPON
     Inventory.Pickupmessage "$PICKUP_PISTOL_DROPPED"
     Tag "$TAG_PISTOL"
     Decal BulletChip

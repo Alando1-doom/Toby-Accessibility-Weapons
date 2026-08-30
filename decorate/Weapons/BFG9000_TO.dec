@@ -10,6 +10,7 @@ ACTOR BFG9000_TO : DoomWeapon
     Weapon.SlotNumber 7
 	Inventory.RespawnTics 105
     +WEAPON.NOAUTOFIRE
+	+WEAPON.CHEATNOTWEAPON
     Inventory.PickupMessage "$GOTBFG9000"
     Tag "$TAG_BFG9000"
     Scale 0.8
